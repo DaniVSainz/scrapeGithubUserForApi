@@ -5,9 +5,9 @@
     <classes>
       <class name="scrapeGithub.ScrapeGithub">
         <methods>
+          <include name="getFirstCommit"/>
           <include name="coolDown"/>
           <include name="setUp"/>
-          <include name="searchGithub"/>
         </methods>
       </class> <!-- scrapeGithub.ScrapeGithub -->
     </classes>

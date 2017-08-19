@@ -31,9 +31,13 @@ public class ScrapeGithub {
 		driver.quit();
 	}
 	
-	@Test
+	@Test(priority=1)
 	public void searchGithub() {
 		githubHome.searchUser(user);
+	}
+	@Test(priority=2)
+	public void getFirstCommit() throws InterruptedException {
+		githubHome.getFirstCommitDate();
 	}
 	
 }

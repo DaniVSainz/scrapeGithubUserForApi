@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6158" started-at="2017-08-19T19:58:19Z" finished-at="2017-08-19T19:58:25Z">
+  <suite name="Default suite" duration-ms="8937" started-at="2017-08-19T20:50:36Z" finished-at="2017-08-19T20:50:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6158" started-at="2017-08-19T19:58:19Z" finished-at="2017-08-19T19:58:25Z">
+    <test name="Default test" duration-ms="8937" started-at="2017-08-19T20:50:36Z" finished-at="2017-08-19T20:50:45Z">
       <class name="scrapeGithub.ScrapeGithub">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:scrapeGithub.ScrapeGithub@523884b2]" name="setUp" is-config="true" duration-ms="2458" started-at="2017-08-19T15:58:19Z" finished-at="2017-08-19T15:58:21Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:scrapeGithub.ScrapeGithub@523884b2]" name="setUp" is-config="true" duration-ms="2725" started-at="2017-08-19T16:50:36Z" finished-at="2017-08-19T16:50:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="searchGithub()[pri:0, instance:scrapeGithub.ScrapeGithub@523884b2]" name="searchGithub" duration-ms="1618" started-at="2017-08-19T15:58:21Z" finished-at="2017-08-19T15:58:23Z">
+        <test-method status="PASS" signature="searchGithub()[pri:1, instance:scrapeGithub.ScrapeGithub@523884b2]" name="searchGithub" duration-ms="2109" started-at="2017-08-19T16:50:39Z" finished-at="2017-08-19T16:50:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchGithub -->
-        <test-method status="PASS" signature="coolDown()[pri:0, instance:scrapeGithub.ScrapeGithub@523884b2]" name="coolDown" is-config="true" duration-ms="2067" started-at="2017-08-19T15:58:23Z" finished-at="2017-08-19T15:58:25Z">
+        <test-method status="PASS" signature="getFirstCommit()[pri:2, instance:scrapeGithub.ScrapeGithub@523884b2]" name="getFirstCommit" duration-ms="2015" started-at="2017-08-19T16:50:41Z" finished-at="2017-08-19T16:50:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getFirstCommit -->
+        <test-method status="PASS" signature="coolDown()[pri:0, instance:scrapeGithub.ScrapeGithub@523884b2]" name="coolDown" is-config="true" duration-ms="2069" started-at="2017-08-19T16:50:43Z" finished-at="2017-08-19T16:50:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- coolDown -->
