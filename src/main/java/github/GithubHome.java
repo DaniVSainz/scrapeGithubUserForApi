@@ -26,7 +26,7 @@ public class GithubHome {
 	WebDriver driver;
 	WebDriverWait wait;
 	String user;
-	JavascriptExecutor jsExecutor;
+	JavascriptExecutor js;
 	Object firstCommit;
 	
 	@FindBy(xpath="//a[@href=\"/login\"]")WebElement login;
@@ -38,6 +38,8 @@ public class GithubHome {
 		this.wait = wait;
 		this.user = user;
 		PageFactory.initElements(driver, this);
+		this.js = (JavascriptExecutor) driver;
+		driver.manage().timeouts().setScriptTimeout(5, TimeUnit.SECONDS);
 	}
 	
 	public void searchUser(String user) {
@@ -48,19 +50,24 @@ public class GithubHome {
 		wait.until(ExpectedConditions.elementToBeClickable(thisUser)).click();
 	}
 	
-	public void getFirstCommitDate() throws InterruptedException {
-		driver.manage().timeouts().setScriptTimeout(5, TimeUnit.SECONDS);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-
-		String getCount=
-				   "var elem=document.querySelectorAll('rect[data-count]');var count=[];"
-				   + "  for (i=0;i<elem.length;i++) { count[i]=elem[i].dataset.count;}"+
-						   "return count";
-		ArrayList count=(ArrayList) js.executeScript(getCount);
+	public ArrayList getDates() throws InterruptedException {
 		String getDate=
 				"var elem=document.querySelectorAll('rect[data-count]');var date=[];"
 				   + "  for (i=0;i<elem.length;i++) { date[i]=elem[i].dataset.date;}"+
 				   "return date";
 		ArrayList dates=(ArrayList) js.executeScript(getDate);
+		return dates;
+
 	}
+	
+	public ArrayList getCounts() {
+		String getCount=
+				   "var elem=document.querySelectorAll('rect[data-count]');var count=[];"
+				   + "  for (i=0;i<elem.length;i++) { count[i]=elem[i].dataset.count;}"+
+						   "return count";
+	
+		ArrayList count=(ArrayList) js.executeScript(getCount);
+		return count;
+	}
+	
 }
