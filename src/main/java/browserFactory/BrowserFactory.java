@@ -17,8 +17,9 @@ import org.openqa.selenium.safari.SafariDriver;
  *
  */
 public class BrowserFactory {
+	static WebDriver driver;
 	
-	public static WebDriver GetBrowser(String browserName) {
+	public static  WebDriver GetBrowser(String browserName) {
 		browserName = browserName.toLowerCase();
 		
 		if(browserName.equals("chrome"))
@@ -55,8 +56,13 @@ public class BrowserFactory {
 		return new FirefoxDriver();
 	}
 	
-	private static ChromeDriver getChromeInstance() {
-		return new ChromeDriver();
+	private static  WebDriver getChromeInstance() {
+		Point pointer = new Point(1920,1);
+		driver = new ChromeDriver();
+		driver.manage().window().setPosition(pointer);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		return driver;
 	}
 	
 	private static SafariDriver getSafariInstance() {
