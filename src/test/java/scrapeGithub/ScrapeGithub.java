@@ -1,6 +1,9 @@
 package scrapeGithub;
 
 import org.testng.annotations.BeforeMethod;
+
+import java.util.ArrayList;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
@@ -13,7 +16,8 @@ import github.GithubHome;
 public class ScrapeGithub {
 	WebDriver driver;
 	WebDriverWait wait;
-	
+	ArrayList commits;
+	ArrayList dates;
 	GithubHome githubHome;
 	String user = "DaniVSainz";
 	
@@ -30,14 +34,17 @@ public class ScrapeGithub {
 		Thread.sleep(2000);
 		driver.quit();
 	}
-	
 	@Test(priority=1)
 	public void searchGithub() {
 		githubHome.searchUser(user);
 	}
 	@Test(priority=2)
-	public void getFirstCommit() throws InterruptedException {
-		githubHome.getFirstCommitDate();
+	public void getDates() throws InterruptedException {
+		dates=githubHome.getDates();
+	}
+	@Test(priority=3)
+	public void getCommits() throws InterruptedException {
+		commits=githubHome.getDates();
 	}
 	
 }

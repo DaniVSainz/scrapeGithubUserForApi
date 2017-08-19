@@ -60,7 +60,7 @@ public class GithubHome {
 
 	}
 	
-	public ArrayList getCounts() {
+	public ArrayList getCommits() {
 		String getCount=
 				   "var elem=document.querySelectorAll('rect[data-count]');var count=[];"
 				   + "  for (i=0;i<elem.length;i++) { count[i]=elem[i].dataset.count;}"+
