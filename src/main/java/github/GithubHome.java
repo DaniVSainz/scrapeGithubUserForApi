@@ -3,6 +3,7 @@
  */
 package github;
 
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -50,9 +51,16 @@ public class GithubHome {
 	public void getFirstCommitDate() throws InterruptedException {
 		driver.manage().timeouts().setScriptTimeout(5, TimeUnit.SECONDS);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		String typeKeywordJS = 
-				  "return document.querySelector('rect[data-count]').getAttribute('data-count')";
-		Thread.sleep(2000);
-		System.out.println(		js.executeScript(typeKeywordJS).toString());
+
+		String getCount=
+				   "var elem=document.querySelectorAll('rect[data-count]');var count=[];"
+				   + "  for (i=0;i<elem.length;i++) { count[i]=elem[i].dataset.count;}"+
+						   "return count";
+		ArrayList count=(ArrayList) js.executeScript(getCount);
+		String getDate=
+				"var elem=document.querySelectorAll('rect[data-count]');var date=[];"
+				   + "  for (i=0;i<elem.length;i++) { date[i]=elem[i].dataset.date;}"+
+				   "return date";
+		ArrayList dates=(ArrayList) js.executeScript(getDate);
 	}
 }
