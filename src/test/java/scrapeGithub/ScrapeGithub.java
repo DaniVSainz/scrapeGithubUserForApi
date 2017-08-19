@@ -15,7 +15,7 @@ public class ScrapeGithub {
 	WebDriverWait wait;
 	
 	GithubHome githubHome;
-	String user = "danivsainz";
+	String user = "DaniVSainz";
 	
 	@BeforeTest
 	public void setUp() {
@@ -23,7 +23,7 @@ public class ScrapeGithub {
 		driver.get("https://github.com/");
 
 		wait = new WebDriverWait(driver,10);
-		githubHome = new GithubHome(driver,wait);
+		githubHome = new GithubHome(driver,wait,user);
 	}
 	@AfterTest
 	public void coolDown() throws InterruptedException {
