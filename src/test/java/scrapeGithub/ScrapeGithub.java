@@ -57,6 +57,7 @@ public class ScrapeGithub {
 	@Test(priority=4)
 	public void makeCommitGson() throws IOException{
 		JsonCreator createCommit= new JsonCreator();
-		createCommit.oneString(user,dates, commits);
+		createCommit.doubleArray(dates, commits);
 	}
+	
 }

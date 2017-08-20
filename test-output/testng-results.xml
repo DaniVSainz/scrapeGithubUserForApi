@@ -1,37 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7198" started-at="2017-08-20T06:04:40Z" finished-at="2017-08-20T06:04:47Z">
+  <suite name="Default suite" duration-ms="6" started-at="2017-08-20T16:10:54Z" finished-at="2017-08-20T16:10:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7198" started-at="2017-08-20T06:04:40Z" finished-at="2017-08-20T06:04:47Z">
-      <class name="scrapeGithub.ScrapeGithub">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:scrapeGithub.ScrapeGithub@523884b2]" name="setUp" is-config="true" duration-ms="2610" started-at="2017-08-20T02:04:40Z" finished-at="2017-08-20T02:04:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="searchGithub()[pri:1, instance:scrapeGithub.ScrapeGithub@523884b2]" name="searchGithub" duration-ms="2133" started-at="2017-08-20T02:04:42Z" finished-at="2017-08-20T02:04:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchGithub -->
-        <test-method status="PASS" signature="getDates()[pri:2, instance:scrapeGithub.ScrapeGithub@523884b2]" name="getDates" duration-ms="21" started-at="2017-08-20T02:04:45Z" finished-at="2017-08-20T02:04:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getDates -->
-        <test-method status="PASS" signature="getCommits()[pri:3, instance:scrapeGithub.ScrapeGithub@523884b2]" name="getCommits" duration-ms="16" started-at="2017-08-20T02:04:45Z" finished-at="2017-08-20T02:04:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getCommits -->
-        <test-method status="PASS" signature="makeCommitGson()[pri:4, instance:scrapeGithub.ScrapeGithub@523884b2]" name="makeCommitGson" duration-ms="326" started-at="2017-08-20T02:04:45Z" finished-at="2017-08-20T02:04:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- makeCommitGson -->
-        <test-method status="PASS" signature="coolDown()[pri:0, instance:scrapeGithub.ScrapeGithub@523884b2]" name="coolDown" is-config="true" duration-ms="2068" started-at="2017-08-20T02:04:45Z" finished-at="2017-08-20T02:04:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- coolDown -->
-      </class> <!-- scrapeGithub.ScrapeGithub -->
+    <test name="Default test" duration-ms="6" started-at="2017-08-20T16:10:54Z" finished-at="2017-08-20T16:10:54Z">
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

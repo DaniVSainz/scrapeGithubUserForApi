@@ -25,19 +25,21 @@ public class JsonCreator {
 	List gsonList;
 	JsonArray myArray;
 		
-	public  void oneString(String user,ArrayList dates,ArrayList commits) throws IOException {
+	public  void oneString(String[][] arrays) throws IOException {
 		GsonBuilder builder = new GsonBuilder();
 		Gson gson = builder.create();
-		for(int i=0;i<dates.size();i++) {
-			GithubUser day = new GithubUser();
-			day.date=dates.get(i).toString();
-			day.commit=commits.get(i).toString();
-			gson.toJsonTree(day);
-			System.out.println(gson.toString());
-		}
-
 	    try (Writer writer = new FileWriter("Output.json")) {
-	    gson.toJson(myArray, writer);
+	    gson.toJson(arrays, writer);
 	    }	
+	}
+	
+	public void doubleArray(ArrayList dates,ArrayList commits) throws IOException {
+		String[][] arrays = new String[372][2];
+
+		for(int i=0;i<dates.size();i++) {
+			arrays[i][0]= dates.get(i).toString();
+			arrays[i][1]= commits.get(i).toString();
+		}
+		oneString(arrays);
 	}
 }
